@@ -7,14 +7,14 @@ Code name: N/A
 ## Introduction
 
 &emsp;
-A set of utility shell scripts to quickly launch relevant ROS programs on the Pi (and eventually the Jetson) so as not to have to look up the pins everytime. This code is provided to conveniently let you start various ROS scripts, such as the CameraSystem, DriveSysteb, ScienceSystem, and webserver no matter where Pi's file directory you are and without running into issues forgetting to set file permissions.
+A set of utility shell scripts to quickly launch relevant ROS programs on the Pi (and eventually the Jetson) so as not to have to look up all the launch commands and file permission settings everytime. This code is provided to conveniently let you start various ROS scripts, such as the CameraSystem, DriveSysteb, ScienceSystem, and webserver no matter where Pi's file directory you are and without running into issues forgetting to set file permissions.
 
 &emsp;
 The primary feature of this script is to ensure that you don't forget to set pin and file permisisons. This is NOT intended to replace or guarantee abiding by the most up to date documentation of these rover systems. It is YOUR RESPONSIBILITY to ensure that the documentation is being followed; this is just for additional convenience.
 
 These scripts require everything to be stored in `~/Desktop`. This can be easily changed by reading and editing the various scripts. When in doubt about what a script will do, quickly read through the script itself, and read through the relevant documentation. Some scripts will contain `sudo` calls within them to properly set file permissions for various outputs (e.g. cameras, physical pins on the Pi). These should be safe (again, it is your responsibility to check before running any command with root permissions), but the actual scripts themselves are not designed to be run with root permissions.
 
-As of 3/3/2025, all scripts are installed and work as intended on the Arm Raspeberry Pi.
+As of 3/3/2025, all scripts are installed and work as intended on the Arm Raspberry Pi.
 
 ## Setup
 
@@ -25,7 +25,7 @@ From inside the root directory of this repo, run
 ./copy.sh
 ```
 
-This will copy everything in `scripts` to `$~/bin`.
+This will copy everything in `scripts` to `~/bin`.
 
 ## Usage
 
