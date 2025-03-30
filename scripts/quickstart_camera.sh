@@ -4,10 +4,5 @@
 
 sudo chmod 666 /dev/video0
 
-# Using flatpak Chromium
-cd ${HOME}/Desktop/CameraSystem && ./start.sh /var/lib/flatpak/app/org.chromium.Chromium/aarch64/stable/active/export/bin/org.chromium.Chromium
-
-# # Using snap Chromium
-# cd ${HOME}/Desktop/CameraSystem && ./start.sh /usr/bin/chromium-browser
-
-
+# $(which chromium) returns the snap version of chromium at the moment               
+cd ${HOME}/Desktop/CameraSystem && ros2 launch launch/combined.launch.py chromium_path:=$(which chromium)
