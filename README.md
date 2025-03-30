@@ -1,6 +1,6 @@
 # Quickstart Utility Scripts
 
-Version: 0.1.0
+Version: 0.1.1
 
 Code name: N/A
 
@@ -14,7 +14,7 @@ The primary feature of this script is to ensure that you don't forget to set pin
 
 These scripts require everything to be stored in `~/Desktop`. This can be easily changed by reading and editing the various scripts. When in doubt about what a script will do, quickly read through the script itself, and read through the relevant documentation. Some scripts will contain `sudo` calls within them to properly set file permissions for various outputs (e.g. cameras, physical pins on the Pi). These should be safe (again, it is your responsibility to check before running any command with root permissions), but the actual scripts themselves are not designed to be run with root permissions.
 
-As of 3/3/2025, all scripts are installed and work as intended on the Arm Raspberry Pi.
+As of 3/30/2025, all scripts are installed and work as intended on the Arm Raspberry Pi.
 
 ## Setup
 
@@ -39,7 +39,7 @@ Type the name of the script you want to use in the terminal and run it. You can 
 - `quickstart_pin_perms.sh`
     - Starts the `pigpiod` daemon and changes the permissions on `/dev/gpiomem` to allow usage of Pi programs invoking GPIO pins. You likely don't need to run this on its own unless you're making a new program that reads/writes to the physical pins on the Pi.
 - `quickstart_camera.sh`
-    - Starts the CameraSystem program using Chromium provided by flatpak
+    - Starts the CameraSystem program (signaler and streamer) using Chromium provided by snap
 - `quickstart_science.sh` 
     - Starts the ScienceSystem
 - `quickstart_drive.sh`
